@@ -3,3 +3,18 @@
     font-family: decoracion;
     src: url(../fonts/FascinateInline-Regular.ttf);
 }
+.encabezado h1{
+    font-family: decoracion;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    
+}
+.sidebar input {
+    display: none;
+}
+.sidebar img{
+    width: 5vw;
+    cursor: pointer;
+}
