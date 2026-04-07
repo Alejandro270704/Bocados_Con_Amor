@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bocados con Amor – Desayunos Artesanales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container-app navbar-inner">
+      <a href="#inicio" class="logo">
+        <svg class="logo-heart" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+        <span class="logo-text">Bocados con Amor</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#menu" class="nav-link">Menú</a>
+        <a href="#nosotros" class="nav-link">Nosotros</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Ver carrito">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+          <span class="cart-count hidden" id="cartCount">0</span>
+        </button>
+        <a href="#menu" class="btn-primary btn-sm">Ordenar ahora</a>
+      </div>
+
+      <div class="mobile-actions">
+        <button class="cart-btn" id="cartBtnMobile" aria-label="Ver carrito">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+          <span class="cart-count hidden" id="cartCountMobile">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#inicio" class="mobile-nav-link">Inicio</a>
+      <a href="#menu" class="mobile-nav-link">Menú</a>
+      <a href="#nosotros" class="mobile-nav-link">Nosotros</a>
+      <a href="#contacto" class="mobile-nav-link">Contacto</a>
+      <a href="#menu" class="btn-primary mobile-order-btn">Ordenar ahora</a>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section id="inicio" class="hero">
+    <div class="hero-bg">
+      <img src="img/hero-bocados.jpg" alt="Mesa de desayuno artesanal" class="hero-img" id="heroBg" />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Floating hearts -->
+    <div class="floating-hearts" aria-hidden="true">
+      <span class="fh fh1">♥</span>
+      <span class="fh fh2">♥</span>
+      <span class="fh fh3">♥</span>
+      <span class="fh fh4">♥</span>
+      <span class="fh fh5">♥</span>
+    </div>
+
+    <div class="container-app hero-content">
+      <div class="hero-text" id="heroText">
+        <div class="badge animate-fade-up" style="animation-delay:.2s">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Hecho con amor artesanal
+        </div>
+        <h1 class="hero-title animate-fade-up" style="animation-delay:.35s">Bocados con Amor</h1>
+        <p class="hero-desc animate-fade-up" style="animation-delay:.55s">
+          Desayunos artesanales que abrazan tu mañana. Cada bocado hecho con ingredientes frescos y una pizca de cariño.
+        </p>
+        <div class="hero-btns animate-fade-up" style="animation-delay:.75s">
+          <a href="#menu" class="btn-primary">Ver menú 💕</a>
+          <a href="#nosotros" class="btn-outline">Conócenos</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint animate-fade-up" style="animation-delay:1.2s">
+      <span>Desliza</span>
+      <svg class="scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+    </div>
+  </section>
+
+  <!-- ========== MENU ========== -->
+  <section id="menu" class="section-spacing">
+    <div class="container-app">
+      <div class="section-header reveal">
+        <div class="section-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Nuestro menú
+        </div>
+        <h2 class="section-title">Delicias para ti</h2>
+        <p class="section-desc">Cada receta es preparada con ingredientes frescos y el cariño que mereces</p>
+      </div>
+
+      <!-- Category filters -->
+      <div class="filters reveal">
+        <button class="filter-btn active" data-cat="Todos">✨ Todos</button>
+        <button class="filter-btn" data-cat="Dulces">🍰 Dulces</button>
+        <button class="filter-btn" data-cat="Salados">🥐 Salados</button>
+        <button class="filter-btn" data-cat="Bebidas">☕ Bebidas</button>
+      </div>
+
+      <!-- Products grid -->
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES ========== -->
+  <section id="nosotros" class="section-spacing features-section">
+    <div class="container-app">
+      <div class="section-header reveal">
+        <div class="section-badge section-badge--light">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          ¿Por qué elegirnos?
+        </div>
+        <h2 class="section-title">Amor en cada detalle</h2>
+        <p class="section-desc">No solo hacemos desayunos, creamos momentos especiales para ti y los tuyos</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+          </div>
+          <h3>Hecho con amor</h3>
+          <p>Cada receta es preparada a mano con dedicación y cariño artesanal.</p>
+        </div>
+        <div class="feature-card reveal" style="transition-delay:.1s">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Ingredientes frescos</h3>
+          <p>Seleccionamos los mejores ingredientes locales y de temporada.</p>
+        </div>
+        <div class="feature-card reveal" style="transition-delay:.2s">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Recién preparado</h3>
+          <p>Tu pedido se prepara al momento para garantizar frescura total.</p>
+        </div>
+        <div class="feature-card reveal" style="transition-delay:.3s">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h3>Calidad premium</h3>
+          <p>Cada detalle importa: desde el empaque hasta la presentación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="contacto" class="footer">
+    <div class="container-app">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" class="footer-heart"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+            <span>Bocados con Amor</span>
+          </div>
+          <p>Desayunos artesanales hechos con ingredientes frescos y mucho cariño para alegrar tus mañanas.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Explora</h4>
+          <a href="#inicio">Inicio</a>
+          <a href="#menu">Menú</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Contáctanos</h4>
+          <a href="mailto:hola@bocadosconamor.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            hola@bocadosconamor.com
+          </a>
+          <a href="tel:+573001234567">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            +57 300 123 4567
+          </a>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Bocados con Amor. Hecho con <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="display:inline;vertical-align:middle;color:var(--primary)"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg> en Colombia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== CART DRAWER ========== -->
+  <div class="overlay hidden" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <div class="cart-header-left">
+        <div class="cart-icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+        </div>
+        <div>
+          <h2>Tu carrito</h2>
+          <p id="cartItemCount">0 productos</p>
+        </div>
+      </div>
+      <button class="close-btn" id="closeCart" aria-label="Cerrar carrito">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <!-- Populated by JS -->
+    </div>
+
+    <div class="cart-footer hidden" id="cartFooter">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">$0</span>
+      </div>
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">$0</span>
+      </div>
+      <button class="btn-primary btn-full" id="checkoutBtn">
+        💕 Finalizar pedido
+      </button>
+      <button class="clear-cart-btn" id="clearCartBtn">Vaciar carrito</button>
+    </div>
+  </div>
+
+  <!-- ========== CHECKOUT MODAL ========== -->
+  <div class="modal-overlay hidden" id="modalOverlay"></div>
+  <div class="modal hidden" id="checkoutModal">
+    <div class="modal-header">
+      <div class="modal-header-left">
+        <button class="back-btn hidden" id="backBtn" aria-label="Volver">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div>
+          <h2 id="modalTitle">Datos de entrega</h2>
+          <p id="modalSubtitle">Paso 1 de 2</p>
+        </div>
+      </div>
+      <button class="close-btn" id="closeModal" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="progress-bar-wrapper">
+      <div class="progress-bar">
+        <div class="progress-seg" id="prog0"></div>
+        <div class="progress-seg" id="prog1"></div>
+        <div class="progress-seg" id="prog2"></div>
+      </div>
+    </div>
+
+    <div class="modal-body" id="modalBody">
+      <!-- Populated by JS -->
+    </div>
+
+    <div class="modal-footer" id="modalFooter">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
